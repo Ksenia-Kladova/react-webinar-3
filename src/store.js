@@ -76,7 +76,7 @@ class Store {
     const updatedList = this.state.list.map(item => {
       if (item.code === code) {
         item.selected = !item.selected;
-        item.selectionCount = item.selectionCount ? item.selectionCount + 1 : 1;
+        item.selectionCount = item.selected ? (item.selectionCount ? item.selectionCount + 1 : 1):(item.selectionCount ? item.selectionCount:0);
       } else {
         item.selected = false;
       }
